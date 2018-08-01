@@ -1,6 +1,5 @@
 /* General Styles
 ===================================================================== */
-
 .grid {
     max-width: 800px;
     margin: 45px auto;
@@ -10,6 +9,7 @@
 
 }
 
+
 /* Title
 ===================================================================== */
 
@@ -17,9 +17,9 @@
     text-align: center;
 }
 
+
 /* Instructions and restart
 ===================================================================== */
-
 .instruct-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -34,10 +34,9 @@
     padding: 20px 20px;
 }
 
+
 /* Score and stats
 ===================================================================== */
-
-
 .score-grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -54,7 +53,6 @@
 
 /* Cards
 ===================================================================== */
-
 .card-grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px 100px;
@@ -67,4 +65,14 @@
     background:#5e9eff;
     border: solid 1px rgba(110,133,156,0.15);
     border-radius: 0.3em;
+    box-shadow: 3px 3px 5px #888888;
+    cursor: pointer;
+}
+
+.card:hover {
+
+	box-shadow: 5px 5px 5px #888888;
+	/* transform-style: preserve-3d; */
+    transition: all .2s ease-in-out;
+    
 }
