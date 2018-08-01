@@ -1,3 +1,6 @@
+/* General Styles
+===================================================================== */
+
 .grid {
     max-width: 800px;
     margin: 45px auto;
@@ -7,14 +10,54 @@
 
 }
 
+/* Title
+===================================================================== */
+
+.game-title {
+    text-align: center;
+}
+
+/* Instructions and restart
+===================================================================== */
+
+.instruct-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.btn {
+    text-align: center;
+}
+.btn a{
+    text-decoration: none;
+    color: #8398bd;
+    padding: 20px 20px;
+}
+
+/* Score and stats
+===================================================================== */
+
+
+.score-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.stats {
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    background:#8398bd;
+    border-radius: 0.5em;
+}
+
+
+/* Cards
+===================================================================== */
+
 .card-grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px 100px;
-}
-
-.score-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
 }
 
 .card {
@@ -24,28 +67,4 @@
     background:#5e9eff;
     border: solid 1px rgba(110,133,156,0.15);
     border-radius: 0.3em;
-}
-
-.score {
-    color: #fff;
-    text-align: center;
-    padding: 25px;
-    background:#8398bd;
-    border-radius: 0.5em;
-}
-
-.timer {
-    color: #fff;
-    text-align: center;
-    padding: 25px;
-    background: #8398bd;
-    border-radius: 0.5em;
-}
-
-.stars {
-    color: #fff;
-    text-align: center;
-    padding: 25px;
-    background:#8398bd;
-    border-radius: 0.5em;
 }
