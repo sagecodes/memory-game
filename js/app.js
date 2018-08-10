@@ -1,7 +1,5 @@
-/*
- * Create a list that holds all of your cards
- */
-
+// list of six cards types with different colors
+ var cardlist = [card-red, card-yellow, card-green, card-purple, card-pink, card-brown];
 
 /*
  * Display the cards on the page
