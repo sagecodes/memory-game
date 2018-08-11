@@ -1,23 +1,13 @@
-// list of six cards types with different colors
  var cardlist = ['card-red', 'card-yellow', 'card-green', 
                 'card-purple', 'card-pink', 'card-brown',
                 'card-red', 'card-yellow', 'card-green', 
                 'card-purple', 'card-pink', 'card-brown'];
-
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
 var cards = "";
 var card;
- for (card in cardlist) {
-    cards += `<div class="card">` + cardlist[card] + `</div>`;
- }
- document.getElementById("card-grid").innerHTML = cards;
 
-// Shuffle function from http://stackoverflow.com/a/2450976
+
+cardlist = shuffle(cardlist);
+
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -31,6 +21,12 @@ function shuffle(array) {
 
     return array;
 }
+
+
+for (card in cardlist) {
+    cards += `<div class="card">` + cardlist[card] + `</div>`;
+ }
+ document.getElementById("card-grid").innerHTML = cards;
 
 
 /*
