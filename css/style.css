@@ -15,16 +15,28 @@ body {
 
 /* Title
 ===================================================================== */
+.game-title {
+    text-align: center;
+}
 
 .game-title-color {
-    text-align: center;
     -webkit-animation-name: title-color-one; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 8s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 20s; /* Safari 4.0 - 8.0 */
     -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
     animation-name: title-color-one;
-    animation-duration: 8s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
 
+
+}
+
+.game-title-match {
+    -webkit-animation-name: title-color-two; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 20s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: title-color-two;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 
 }
 
@@ -44,6 +56,24 @@ body {
     75%  {color:purple;}
     100% {color:red;}
 }
+
+@keyframes title-color-two {
+    0%   {color:purple;}
+    25%  {color:red;}
+    50%  {color:green;}
+    75%  {color:yellow;}
+    100% {color:purple;}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes title-color-two {
+    0%   {color:purple;}
+    25%  {color:red;}
+    50%  {color:green;}
+    75%  {color:yellow;}
+    100% {color:purple;}
+}
+
 
 
 /* Instructions and restart
