@@ -111,7 +111,7 @@ body {
 
 /* Cards
 ===================================================================== */
-.card-grid {
+#card-grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px 100px;
     background: #f9f9f9;
