@@ -15,8 +15,34 @@ body {
 
 /* Title
 ===================================================================== */
-.game-title {
+
+.game-title-color {
     text-align: center;
+    -webkit-animation-name: title-color-one; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 8s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: title-color-one;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes title-color-one {
+    0%   {color:red;}
+    25%  {color:yellow;}
+    50%  {color:green;}
+    75%  {color:purple;}
+    100% {color:red;}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes title-color-one {
+    0%   {color:red;}
+    25%  {color:yellow;}
+    50%  {color:green;}
+    75%  {color:purple;}
+    100% {color:red;}
 }
 
 
