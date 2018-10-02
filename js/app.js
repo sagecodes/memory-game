@@ -27,7 +27,7 @@ function shuffle(array) {
 cardlist = shuffle(cardlist);
 
 for (card in cardlist) {
-    cards += `<div class="card">` + cardlist[card] + `</div>`;
+    cards += `<div class="card `+ cardlist[card]+`">` + cardlist[card] + `</div>`;
  }
  document.getElementById("card-grid").innerHTML = cards;
 
@@ -36,10 +36,11 @@ for (card in cardlist) {
     // Get card class on click
     $('.card').click(function() {
         var cardClass = $(this).attr('class');
+        cardClass = cardClass.split(' ').pop();
         console.log( cardClass );
     });
 
-    // Display card Symbol (Color) with a function
+    // Display card Symbol (Color) with a function (Display from open cards?)
 
     // Add card to list of open card if list is < 2
 
