@@ -2,7 +2,8 @@
 var cardlist = ['card-red', 'card-yellow', 'card-green', 
                 'card-purple', 'card-pink', 'card-brown',
                 'card-red', 'card-yellow', 'card-green', 
-                'card-purple', 'card-pink', 'card-brown'];
+                'card-purple', 'card-pink', 'card-brown',
+                'card-blue', 'card-blue','card-orange', 'card-orange'];
 var cards = "";
 var card;
 
