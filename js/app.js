@@ -30,6 +30,13 @@ for (card in cardlist) {
  document.getElementById("card-grid").innerHTML = cards;
 
 
+ // Get card class on click
+ $('.card').click(function() {
+    var cardClass = $(this).attr('class');
+    console.log( cardClass );
+});
+
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
