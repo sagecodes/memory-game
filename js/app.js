@@ -6,6 +6,8 @@ var cardlist = ['card-red', 'card-yellow', 'card-green',
                 'card-blue', 'card-blue','card-orange', 'card-orange'];
 var cards = "";
 var card;
+var openCards = [];
+var lockedCards =[];
 
 // Shuffle function for cards
 function shuffle(array) {
@@ -30,12 +32,23 @@ for (card in cardlist) {
  document.getElementById("card-grid").innerHTML = cards;
 
 
- // Get card class on click
- $('.card').click(function() {
-    var cardClass = $(this).attr('class');
-    console.log( cardClass );
-});
+ // Card Clicked | TODO Create into Function
+    // Get card class on click
+    $('.card').click(function() {
+        var cardClass = $(this).attr('class');
+        console.log( cardClass );
+    });
 
+    // Display card Symbol (Color) with a function
+
+    // Add card to list of open card if list is < 2
+
+        // if list is 2 and cards match 
+            // Lock flipped (locked_list)
+            // Add +1 one to matchedCounter
+
+        // if cards do not match remove from list and hide symbol(color)
+    // Add + 1 to moveCounter
 
 /*
  * set up the event listener for a card. If a card is clicked:
