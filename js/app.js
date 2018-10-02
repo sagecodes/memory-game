@@ -24,12 +24,13 @@ function shuffle(array) {
 }
 
 // Shuffle and load cards on page
-cardlist = shuffle(cardlist);
-
-for (card in cardlist) {
-    cards += `<div class="card `+ cardlist[card]+`">` + cardlist[card] + `</div>`;
- }
- document.getElementById("card-grid").innerHTML = cards;
+function loadCards(){
+    cardlist = shuffle(cardlist);
+    for (card in cardlist) {
+        cards += `<div class="card `+ cardlist[card]+`">` + cardlist[card] + `</div>`;
+     }
+     document.getElementById("card-grid").innerHTML = cards;
+}
 
 
  // Card Clicked | TODO Create into Function
@@ -37,10 +38,12 @@ for (card in cardlist) {
     $('.card').click(function() {
         var cardClass = $(this).attr('class');
         cardClass = cardClass.split(' ').pop();
-        console.log( cardClass );
+        openCards.push(cardClass);
+        console.log( openCards );
     });
 
     // Display card Symbol (Color) with a function (Display from open cards?)
+        // For card in open cards add flipped class to card
 
     // Add card to list of open card if list is < 2
 
@@ -51,6 +54,12 @@ for (card in cardlist) {
         // if cards do not match remove from list and hide symbol(color)
     // Add + 1 to moveCounter
 
+// Initial states and elements for game
+// Loads State on page load
+function initialGame() {
+    loadCards();
+}
+initialGame();
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
@@ -71,3 +80,4 @@ for (card in cardlist) {
  *     reset stars, timer, and moves
  *      
  */
+
