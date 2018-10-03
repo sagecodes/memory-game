@@ -6,7 +6,7 @@ var cardlist = ['card-red', 'card-yellow', 'card-green',
                 'card-blue', 'card-blue','card-orange', 'card-orange'];
 var cards = "";
 var card;
-var openCards = [];
+var openedCards = [];
 var lockedCards =[];
 
 // Shuffle function for cards
@@ -32,24 +32,28 @@ function loadCards(){
      document.getElementById("card-grid").innerHTML = cards;
 }
 
-
  // Card Clicked | TODO Create into Function
     // Get card class on click
     $('.card').click(function() {
         var cardClass = $(this).attr('class');
         cardClass = cardClass.split(' ').pop();
-        openCards.push(cardClass);
-        console.log( openCards );
+        openedCards.push(cardClass);
+        console.log( openedCards );
     });
 
-    // Display card Symbol (Color) with a function (Display from open cards?)
+
+// Display card Symbol (Color) with a function (Display from open cards?)
         // For card in open cards add flipped class to card
-
-    // Add card to list of open card if list is < 2
-
+ 
+        // Add card to list of open card if list is < 2
         // if list is 2 and cards match 
             // Lock flipped (locked_list)
             // Add +1 one to matchedCounter
+
+function openCard(card){
+    openedCards.push(card);
+    console.log( openedCards );
+}
 
         // if cards do not match remove from list and hide symbol(color)
     // Add + 1 to moveCounter
@@ -58,6 +62,13 @@ function loadCards(){
 // Loads State on page load
 function initialGame() {
     loadCards();
+
+    $('.card').click(function() {
+        var cardClass = $(this).attr('class');
+        cardClass = cardClass.split(' ').pop();
+        openCard(cardClass);
+    });
+
 }
 initialGame();
 /*
