@@ -8,6 +8,7 @@ var cards = "";
 var card;
 var openedCards = [];
 var lockedCards =[];
+var moveCounter = 0;
 
 // Shuffle function for cards
 function shuffle(array) {
@@ -32,16 +33,6 @@ function loadCards(){
      document.getElementById("card-grid").innerHTML = cards;
 }
 
- // Card Clicked | TODO Create into Function
-    // Get card class on click
-    $('.card').click(function() {
-        var cardClass = $(this).attr('class');
-        cardClass = cardClass.split(' ').pop();
-        openedCards.push(cardClass);
-        console.log( openedCards );
-    });
-
-
 // Display card Symbol (Color) with a function (Display from open cards?)
         // For card in open cards add flipped class to card
  
@@ -60,9 +51,11 @@ function openCard(card){
             console.log("it was not a match!")
             //flip back
         }
-        openedCards=[]
+        openedCards=[];
+        countMove();
+        
     }
-    console.log( "Openedcards: " + openedCards );
+    console.log( "Openedcards: " + openedCards + " | moves: " + moveCounter );   
 }
 
 function lockCards(openedCards){
@@ -72,6 +65,9 @@ function lockCards(openedCards){
 }
         // if cards do not match remove from list and hide symbol(color)
     // Add + 1 to moveCounter
+function countMove(){
+    moveCounter += 1;
+}
 
 // Initial states and elements for game
 // Loads State on page load
