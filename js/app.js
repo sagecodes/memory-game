@@ -54,13 +54,22 @@ function openCard(card){
     if(openedCards.length == 2) {
         if (card == openedCards[0]){
             console.log("It Was A Match!")
-            // lockCards()
-            openedCards=[]
+            lockCards(openedCards);
         }
+        else {
+            console.log("it was not a match!")
+            //flip back
+        }
+        openedCards=[]
     }
     console.log( "Openedcards: " + openedCards );
 }
 
+function lockCards(openedCards){
+    lockedCards.push(openedCards[0]);
+    //Leave cards flipped
+    console.log("lockedCards: " + lockedCards);
+}
         // if cards do not match remove from list and hide symbol(color)
     // Add + 1 to moveCounter
 
