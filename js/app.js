@@ -48,11 +48,17 @@ function loadCards(){
         // Add card to list of open card if list is < 2
         // if list is 2 and cards match 
             // Lock flipped (locked_list)
-            // Add +1 one to matchedCounter
 
 function openCard(card){
     openedCards.push(card);
-    console.log( openedCards );
+    if(openedCards.length == 2) {
+        if (card == openedCards[0]){
+            console.log("It Was A Match!")
+            // lockCards()
+            openedCards=[]
+        }
+    }
+    console.log( "Openedcards: " + openedCards );
 }
 
         // if cards do not match remove from list and hide symbol(color)
@@ -70,6 +76,7 @@ function initialGame() {
     });
 
 }
+
 initialGame();
 /*
  * set up the event listener for a card. If a card is clicked:
